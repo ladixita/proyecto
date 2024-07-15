@@ -1,0 +1,9 @@
+<h4>Lista de Alumnos</h4>
+
+<button class="btn btn-primary" (click)="agregarAlumno()">Agregar un alumno</button>
+<app-create-alumno-form></app-create-alumno-form>
+<ul class="list-group">
+    <li *ngFor="let alumno of dataAlumnos" class="list-group-item">
+        {{ alumno.id }} - {{ alumno.nombre }} <button (click)="eliminarAlmno.emit(alumno.id)" class="btn btn-danger">X</button>
+    </li>
+</ul>

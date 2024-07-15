@@ -1,0 +1,7 @@
+<h4>Lista de Cursos</h4>
+
+<ul class="list-group">
+    <li *ngFor="let curso of dataCursos" class="list-group-item">
+        {{ curso.id }} - {{ curso.nombreCurso }} <button (click)="eliminarCurso.emit(curso.id)" class="btn btn-danger">X</button>
+    </li>
+</ul>
