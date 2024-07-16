@@ -13,9 +13,9 @@ export class AlumnoDialogComponent {
   constructor(private fb: FormBuilder, private matDialogRef: MatDialogRef<AlumnoDialogComponent>) {
     this.alumnoForm = this.fb.group({
       nombre: ['', [Validators.required]],
-      apellido: ['', [Validators.required]],
+      Apellido: ['', [Validators.required]],
       edad: ['', [Validators.required]],
-      aprobado: [true, [Validators.required]]
+      estaAprobado: [true, [Validators.required]]
     });
   }
 

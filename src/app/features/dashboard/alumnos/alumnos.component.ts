@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AlumnoDialogComponent } from './components/alumno-dialog/alumno-dialog.component';
 import { Alumno } from '../../../interfaces/Alumno.Interface';
+import { generateRandomId } from '../../../shared/utils';
 
 const ELEMENT_DATA: Alumno[] = [
   {
@@ -28,7 +29,7 @@ const ELEMENT_DATA: Alumno[] = [
 export class AlumnosComponent {
   nombreAlumno = '';
   alumno: Alumno | null = null;
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['nro', 'nombre', 'apellido', 'edad', 'aprobado', 'acciones'];
   dataSource = ELEMENT_DATA;
 
   constructor(private matDialog: MatDialog) {
@@ -41,6 +42,8 @@ export class AlumnosComponent {
         console.log('Recibimos el valor: ', value);
         if(value) {
           this.alumno = value;
+          value[0] = generateRandomId(3);
+          this.dataSource = [...this.dataSource, value];
         }
       }
     });
