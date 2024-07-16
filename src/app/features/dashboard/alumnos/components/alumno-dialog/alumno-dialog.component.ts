@@ -26,6 +26,10 @@ export class AlumnoDialogComponent {
 
   onSave(): void {
     console.log(this.alumnoForm.value);
-    this.matDialogRef.close(this.alumnoForm.value);
+    if(this.alumnoForm.valid) {
+      this.matDialogRef.close(this.alumnoForm.value);
+    } else {
+      alert('Formulario invalido');
+    }
   }
 }
