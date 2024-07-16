@@ -48,4 +48,21 @@ export class AlumnosComponent {
       }
     });
   }
+
+  editAlumno(alumnoEdit: Alumno) {
+    //enviando alumno
+    this.matDialog.open(AlumnoDialogComponent, {data: alumnoEdit}).afterClosed().subscribe(({
+      next: (value) => {
+        if(!!value) {
+          this.dataSource = this.dataSource.map((el) => el.id === alumnoEdit.id ? {...value, id: alumnoEdit.id} : el)
+        }
+      }
+    }));
+  }
+
+  deleteAlumnoById(id: string | number) {
+    if(confirm('Esta seguro de eliminar un alumno?')) {
+      this.dataSource = this.dataSource.filter((el) => el.id != id);
+    }
+  }
 }

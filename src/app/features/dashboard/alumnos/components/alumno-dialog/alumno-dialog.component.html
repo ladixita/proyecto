@@ -1,4 +1,6 @@
-<h2 mat-dialog-title>Añadir alumno</h2>
+<h2 mat-dialog-title>
+    {{ editingAlumno ? 'Editando alumno ' + editingAlumno.nombre : 'Añadir alumno'}}
+</h2>
 <mat-dialog-content>
     <form [formGroup]="alumnoForm">
         <mat-form-field appearance="fill" class="w-full">
