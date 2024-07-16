@@ -15,13 +15,15 @@ export class AppComponent {
   alumnos: Alumno[] = [
     {
       id: 1,
-      nombre: 'Leidy Uribe',
+      nombre: 'Leidy',
+      Apellido: 'Uribe Marcos',
       edad: 32,
       estaAprobado: false
     },
     {
       id: 2,
-      nombre: 'Leonardo Marcos',
+      nombre: 'Leonardo',
+      Apellido: 'Tenorio Marcos',
       edad: 28,
       estaAprobado: true
     }

@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { SharedModule } from '../../../shared/shared.module';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SharedModule } from '../../../shared/shared.module';
     MatInputModule,
     ReactiveFormsModule,
     MatSelectModule,
-    SharedModule
+    SharedModule,
+    MatTableModule
   ]
 })
 export class AlumnosModule { }
